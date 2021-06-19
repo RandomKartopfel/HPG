@@ -19,8 +19,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="4347"/>
-        <CursorPos X="57" Y="4349"/>
+        <TopLine Value="512"/>
+        <CursorPos X="3" Y="16"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -104,14 +104,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="408"/>
         <CursorPos Y="409"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit12>
       <Unit13>
         <Filename Value="/usr/share/lazarus/2.0.6/lcl/interfaces/gtk2/gtk2widgetset.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2282"/>
         <CursorPos Y="2353"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit13>
       <Unit14>
         <Filename Value="/usr/share/lazarus/2.0.6/lcl/interfaces/gtk2/gtk2wsspin.pp"/>

@@ -7,10 +7,81 @@ interface
 uses
   Classes, SysUtils, FileUtil, SpinEx, Forms, Controls, Graphics,
   Dialogs, StdCtrls, Spin, ComCtrls, strutils, LCLIntf, ExtCtrls, Menus,
-  EditBtn , Types;
+  EditBtn , Types, DefaultTranslator;
 const
 
   StdWordDelims = ['='] + Brackets;
+  
+resourcestring
+grPriceCapt = 'г. цена:';
+priceCapt = 'Стоимость: ';
+perLitreCapt = 'за 1 литр:';
+concentrationCapt = 'Концентрация: ';
+multiplicityCapt = 'Кратность: ';
+consumptionCapt = 'Расход: ';
+grLitCap = 'г/л';
+mlitSoluCap = 'мл/л раствора';
+grCap = ' г. ';
+grMlCap = 'г/мл';
+volCap = 'Объем: ';
+volACap = 'Концентрат A';
+volBCap = 'Концентрат B';
+addWaterCap = 'Долить воды: ';
+compositionCap = 'Состав: ';
+CaNO3Cap17 = 'Кальций азотнокислый Са(NО3)2*4H2O';
+CaNO3Cap20 = 'Кальций азотнокислый Ca(NO3)2*2H2O';
+CaNO3Cap24 = 'Кальций азотнокислый Ca(NO3)2';
+CaNO3CapFert = 'Селитра кальциевая';
+
+KNO3Cap = 'Калий азотнокислый KNO3';
+KNO3CapFert = 'Селитра калиевая';
+
+NH4NO3Cap = 'Аммоний азотнокислый NH4NO3';
+NH4NO3CapFert = 'Селитра аммиачная';
+
+MgSO4Cap9 = 'Магний сернокислый MgSO4*7H2O';
+MgSO4Cap20 = 'Магний сернокислый MgSO4';
+MgSO4CapFert = 'Сульфат магния';
+
+KH2PO4Cap = 'Калий фосфорнокислый KH2PO4';
+KH2PO4CapFert = 'Монофосфат калия';
+
+K2SO4Cap44 = 'Калий сернокислый K2SO4';
+K2SO4CapFert = 'Сульфат калия';
+
+MgNO3Cap9 = 'Магний азотнокислый Mg(NO3)2*6H2O';
+MgNO3Cap16 = 'Магний азотнокислый Mg(NO3)2';
+MgNO3CapFert = 'Селитра магниевая';
+
+CaCl2Cap18 = 'Хлорид кальция 6-водный CaCl2*6H2O';
+CaCl2Cap36 = 'Хлорид кальция безводный CaCl2';
+CaCl2CapFert = 'Кальций хлористый';
+
+korrMainCap = 'ОСНОВНОЕ:';
+korrChangeVolBy = 'Изменение объема на: ';
+korrOldSolShare = 'Доля старого расвтора: ';
+korrChangeEC = 'Изменение EC на: ';
+korrChangeNOverBy = 'Изменение N общий на: ';
+korrProfileCap = 'ПРОФИЛЬ:';
+korrKorrTxt = 'Коррекция';
+korrByTxt = 'на: ';
+
+korrCorrelationsCap = 'СООТНОШЕНИЯ:';
+korrBefore = 'до ';
+korrAfter = ' после ';
+m1TextCap = 'Корректор. Скорректирован раствор до ';
+m1TextLitersCap = 'литров.';
+m1TextAutoCap = 'Автозапись. Изготовлен раствор на ';
+NoDescFieldError = 'Не заполнено поле описание!';
+
+lFeCap = 'Железо';
+lMnCap = 'Марганец';
+lBCap = 'Бор';
+lZnCap = 'Цинк';
+lCuCap = 'Медь';
+lMoCap = 'Молибден';
+lCoCap = 'Кобальт';
+lSiCap = 'Кремний';
 
 type
 
@@ -1083,14 +1154,14 @@ begin
  prCaCl2:=   Kf.cgCaCl2.value*Kf.gCaCl2.value;
 
 
- Kf.cnCaNO3.caption:=Kf.knCaNO3.caption +  ' ' + FloatToStr(round(Kf.gCaNO3.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prCaNO3*100)/100) ;
- Kf.cnKNO3.caption:=Kf.knKNO3.caption +  ' ' + FloatToStr(round(Kf.gKNO3.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prKNO3*100)/100) ;
- Kf.cnNH4NO3.caption:=Kf.knNH4NO3.caption +  ' ' + FloatToStr(round(Kf.gNH4NO3.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prNH4NO3*100)/100) ;
- Kf.cnMgSO4.caption:=Kf.knMgSO4.caption +  ' ' + FloatToStr(round(Kf.gMgSO4.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prMgSO4*100)/100) ;
- Kf.cnKH2PO4.caption:=Kf.knKH2PO4.caption +  ' ' + FloatToStr(round(Kf.gKH2PO4.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prKH2PO4*100)/100) ;
- Kf.cnK2SO4.caption:=Kf.knK2SO4.caption +  ' ' + FloatToStr(round(Kf.gK2SO4.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prK2SO4*100)/100) ;
- Kf.cnMgNO3.caption:=Kf.knMgNO3.caption +  ' ' + FloatToStr(round(Kf.gMgNO3.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prMgNO3*100)/100) ;
- Kf.cnCaCl2.caption:=Kf.knCaCl2.caption +  ' ' + FloatToStr(round(Kf.gCaCl2.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prCaCl2*100)/100) ;
+ Kf.cnCaNO3.caption:=Kf.knCaNO3.caption +  ' ' + FloatToStr(round(Kf.gCaNO3.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prCaNO3*100)/100) ;
+ Kf.cnKNO3.caption:=Kf.knKNO3.caption +  ' ' + FloatToStr(round(Kf.gKNO3.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prKNO3*100)/100) ;
+ Kf.cnNH4NO3.caption:=Kf.knNH4NO3.caption +  ' ' + FloatToStr(round(Kf.gNH4NO3.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prNH4NO3*100)/100) ;
+ Kf.cnMgSO4.caption:=Kf.knMgSO4.caption +  ' ' + FloatToStr(round(Kf.gMgSO4.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prMgSO4*100)/100) ;
+ Kf.cnKH2PO4.caption:=Kf.knKH2PO4.caption +  ' ' + FloatToStr(round(Kf.gKH2PO4.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prKH2PO4*100)/100) ;
+ Kf.cnK2SO4.caption:=Kf.knK2SO4.caption +  ' ' + FloatToStr(round(Kf.gK2SO4.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prK2SO4*100)/100) ;
+ Kf.cnMgNO3.caption:=Kf.knMgNO3.caption +  ' ' + FloatToStr(round(Kf.gMgNO3.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prMgNO3*100)/100) ;
+ Kf.cnCaCl2.caption:=Kf.knCaCl2.caption +  ' ' + FloatToStr(round(Kf.gCaCl2.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prCaCl2*100)/100) ;
 
  if (kF.chKComplex.Checked = True) then  begin
   Kf.cnCmplx.Visible:=True;     Kf.cgCmplx.Visible:=True;
@@ -1104,7 +1175,7 @@ begin
   Kf.cnSi.Visible:=False;  Kf.cgSi.Visible:=False;
 
   prCmplx:=   Kf.cgCmplx.value*Kf.gCmplx.value;
-  Kf.cnCmplx.caption:=Kf.lCmplx.caption +  ' ' + FloatToStr(round(Kf.gCmplx.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prCmplx*100)/100) ;
+  Kf.cnCmplx.caption:=Kf.lCmplx.caption +  ' ' + FloatToStr(round(Kf.gCmplx.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prCmplx*100)/100) ;
 
   prAll:= prCaNO3+prMgSO4+prKH2PO4+prNH4NO3+prKNO3+prK2SO4+prMgNO3+prCaCl2+prCmplx ;
 
@@ -1129,19 +1200,19 @@ begin
   prCo:=   Kf.cgCo.value*Kf.gCo.value;
   prSi:=   Kf.cgSi.value*Kf.gSi.value;
 
-  Kf.cnFe.caption:=Kf.lFe.caption +  ' ' + FloatToStr(round(Kf.gFe.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prFe*100)/100) ;
-  Kf.cnMn.caption:=Kf.lMn.caption +  ' ' + FloatToStr(round(Kf.gMn.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prMn*100)/100) ;
-  Kf.cnB.caption:=Kf.lB.caption +  ' ' + FloatToStr(round(Kf.gB.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prB*100)/100) ;
-  Kf.cnZn.caption:=Kf.lZn.caption +  ' ' + FloatToStr(round(Kf.gZn.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prZn*100)/100) ;
-  Kf.cnCu.caption:=Kf.lCu.caption +  ' ' + FloatToStr(round(Kf.gCu.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prCu*100)/100) ;
-  Kf.cnMo.caption:=Kf.lMo.caption +  ' ' + FloatToStr(round(Kf.gMo.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prMo*100)/100) ;
-  Kf.cnCo.caption:=Kf.lCo.caption +  ' ' + FloatToStr(round(Kf.gCo.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prCo*100)/100) ;
-  Kf.cnSi.caption:=Kf.lSi.caption +  ' ' + FloatToStr(round(Kf.gSi.value*1000)/1000) + ' г. цена: ' + FloatToStr(round(prSi*100)/100) ;
+  Kf.cnFe.caption:=Kf.lFe.caption +  ' ' + FloatToStr(round(Kf.gFe.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prFe*100)/100) ;
+  Kf.cnMn.caption:=Kf.lMn.caption +  ' ' + FloatToStr(round(Kf.gMn.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prMn*100)/100) ;
+  Kf.cnB.caption:=Kf.lB.caption +  ' ' + FloatToStr(round(Kf.gB.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prB*100)/100) ;
+  Kf.cnZn.caption:=Kf.lZn.caption +  ' ' + FloatToStr(round(Kf.gZn.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prZn*100)/100) ;
+  Kf.cnCu.caption:=Kf.lCu.caption +  ' ' + FloatToStr(round(Kf.gCu.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prCu*100)/100) ;
+  Kf.cnMo.caption:=Kf.lMo.caption +  ' ' + FloatToStr(round(Kf.gMo.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prMo*100)/100) ;
+  Kf.cnCo.caption:=Kf.lCo.caption +  ' ' + FloatToStr(round(Kf.gCo.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prCo*100)/100) ;
+  Kf.cnSi.caption:=Kf.lSi.caption +  ' ' + FloatToStr(round(Kf.gSi.value*1000)/1000) + ' '+grPriceCapt+' ' + FloatToStr(round(prSi*100)/100) ;
 
   prAll:= prCaNO3+prMgSO4+prKH2PO4+prNH4NO3+prKNO3+prK2SO4+prMgNO3+prCaCl2+prFe+prMn+prB+prZn+prCu+prMo+prCo+prSi  ;
 
  end;
-  if (V > 0) then Kf.lprice.Caption:='Стоимость:' + FloatToStr(round(prAll*100)/100)+' за 1 литр:'+ FloatToStr(round(prAll/V*100)/100);
+  if (V > 0) then Kf.lprice.Caption:=priceCapt + FloatToStr(round(prAll*100)/100)+ ' ' + perLitreCapt + FloatToStr(round(prAll/V*100)/100);
 
 end;
 procedure CalcSoil ;
@@ -1187,9 +1258,9 @@ begin
 
   // Расчет параметров раствора микры в жидком виде
   if (Kf.TMicro.Value > 0 ) then begin
-  Kf.lMicro.Text:='Концентрация: ' + floattostr(Round(Kf.gCmplx.Value*1000/Kf.TMicro.Value*100)/100) + ' г/л,'
-                 +' Кратность: ' + floattostr(Round(Kf.V.value/Kf.TMicro.Value*1000)) + ':1,'
-                 +' Расход: ' + floattostr(Round(Kf.TMicro.Value/Kf.V.value*10)/10) + ' мл/л раствора' ;
+  Kf.lMicro.Text:=concentrationCapt + floattostr(Round(Kf.gCmplx.Value*1000/Kf.TMicro.Value*100)/100) + ' '+grLitCap+', '
+                 +multiplicityCapt + floattostr(Round(Kf.V.value/Kf.TMicro.Value*1000)) + ':1, '
+                 +consumptionCapt + floattostr(Round(Kf.TMicro.Value/Kf.V.value*10)/10) + ' '+mlitSoluCap;
   end;
   price;
 end;
@@ -1619,14 +1690,14 @@ begin
     Kf.knKH2PO4.caption:= Kf.nKH2PO4.caption;
     Kf.knCaCl2.caption:= Kf.nCaCl2.caption;
 
-    Kf.lFe.Caption:='Железо Fe='+FloatToStr(Kf.dFe.value)+'%';
-    Kf.lMn.Caption:='Марганец Mn='+FloatToStr(Kf.dMn.value)+'%';
-    Kf.lB.Caption:='Бор B='+FloatToStr(Kf.dB.value)+'%';
-    Kf.lZn.Caption:='Цинк Zn='+FloatToStr(Kf.dZn.value)+'%';
-    Kf.lCu.Caption:='Медь Cu='+FloatToStr(Kf.dCu.value)+'%';
-    Kf.lMo.Caption:='Молибден Mo='+FloatToStr(Kf.dMo.value)+'%';
-    Kf.lCo.Caption:='Кобальт Co='+FloatToStr(Kf.dCo.value)+'%';
-    Kf.lSi.Caption:='Кремний Si='+FloatToStr(Kf.dSi.value)+'%';
+    Kf.lFe.Caption:=lFeCap+' Fe='+FloatToStr(Kf.dFe.value)+'%';
+    Kf.lMn.Caption:=lMnCap+' Mn='+FloatToStr(Kf.dMn.value)+'%';
+    Kf.lB.Caption:=lBCap+' B='+FloatToStr(Kf.dB.value)+'%';
+    Kf.lZn.Caption:=lZnCap+' Zn='+FloatToStr(Kf.dZn.value)+'%';
+    Kf.lCu.Caption:=lCuCap+' Cu='+FloatToStr(Kf.dCu.value)+'%';
+    Kf.lMo.Caption:=lMoCap+' Mo='+FloatToStr(Kf.dMo.value)+'%';
+    Kf.lCo.Caption:=lCoCap+' Co='+FloatToStr(Kf.dCo.value)+'%';
+    Kf.lSi.Caption:=lSiCap+' Si='+FloatToStr(Kf.dSi.value)+'%';
 
     Kf.g2gCaNO3.caption:=FloatToStr(round(Kf.ggCaNO3.value*100)/100,MyFormatSettings);
     Kf.g2gKNO3.caption:=FloatToStr(round(Kf.ggKNO3.value*100)/100,MyFormatSettings);
@@ -1648,24 +1719,24 @@ begin
     Kf.g2gCo.caption:=FloatToStr(round(Kf.ggCo.value*100)/100,MyFormatSettings);
     Kf.g2gSi.caption:=FloatToStr(round(Kf.ggSi.value*100)/100,MyFormatSettings);
 
-    Kf.k2nCaNO3.Caption:= Kf.knCaNO3.caption +  ' ' + FloatToStr(round(Kf.gCaNO3.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glCaNO3.Value)+ ' г/л, '+FloatToStr(Kf.gmlCaNO3.Value)+ ' г/мл)';
-    Kf.k2nKNO3.Caption:=  Kf.knKNO3.caption + ' ' + FloatToStr(round(Kf.gKNO3.value*1000)/1000) + ' г. ' +' (' + FloatToStr(Kf.glKNO3.Value)+ ' г/л, '+FloatToStr(Kf.gmlKNO3.Value)+ ' г/мл)';
-    Kf.k2nNH4NO3.Caption:= Kf.knNH4NO3.caption +' ' + FloatToStr(round(Kf.gNH4NO3.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glNH4NO3.Value)+ ' г/л, '+FloatToStr(Kf.gmlNH4NO3.Value)+ ' г/мл)';
-    Kf.k2nMgNO3.Caption:= Kf.knMgNO3.caption +' ' + FloatToStr(round(Kf.gMgNO3.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glMgNO3.Value)+ ' г/л, '+FloatToStr(Kf.gmlMgNO3.Value)+ ' г/мл)';
-    Kf.k2nMgSO4.Caption:= Kf.knMgSO4.caption +' ' + FloatToStr(round(Kf.gMgSO4.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glMgSO4.Value)+ ' г/л, '+FloatToStr(Kf.gmlMgSO4.Value)+ ' г/мл)';
-    Kf.k2nKH2PO4.Caption:= Kf.knKH2PO4.caption +' ' + FloatToStr(round(Kf.gKH2PO4.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glKH2PO4.Value)+ ' г/л, '+FloatToStr(Kf.gmlKH2PO4.Value)+ ' г/мл)';
-    Kf.k2nK2SO4.Caption:= Kf.knK2SO4.caption +' ' + FloatToStr(round(Kf.gK2SO4.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glK2SO4.Value)+ ' г/л, '+FloatToStr(Kf.gmlK2SO4.Value)+ ' г/мл)';
-    Kf.k2nCaCl2.Caption:= Kf.knCaCl2.caption +' ' + FloatToStr(round(Kf.gCaCl2.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glCaCl2.Value)+ ' г/л, '+FloatToStr(Kf.gmlCaCl2.Value)+ ' г/мл)';
+    Kf.k2nCaNO3.Caption:= Kf.knCaNO3.caption +  ' ' + FloatToStr(round(Kf.gCaNO3.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glCaNO3.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlCaNO3.Value)+ ' '+grMlCap+') ';
+    Kf.k2nKNO3.Caption:=  Kf.knKNO3.caption + ' ' + FloatToStr(round(Kf.gKNO3.value*1000)/1000) + grCap +' (' + FloatToStr(Kf.glKNO3.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlKNO3.Value)+ ' '+grMlCap+') ';
+    Kf.k2nNH4NO3.Caption:= Kf.knNH4NO3.caption +' ' + FloatToStr(round(Kf.gNH4NO3.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glNH4NO3.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlNH4NO3.Value)+ ' '+grMlCap+') ';
+    Kf.k2nMgNO3.Caption:= Kf.knMgNO3.caption +' ' + FloatToStr(round(Kf.gMgNO3.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glMgNO3.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlMgNO3.Value)+ ' '+grMlCap+') ';
+    Kf.k2nMgSO4.Caption:= Kf.knMgSO4.caption +' ' + FloatToStr(round(Kf.gMgSO4.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glMgSO4.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlMgSO4.Value)+ ' '+grMlCap+') ';
+    Kf.k2nKH2PO4.Caption:= Kf.knKH2PO4.caption +' ' + FloatToStr(round(Kf.gKH2PO4.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glKH2PO4.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlKH2PO4.Value)+ ' '+grMlCap+') ';
+    Kf.k2nK2SO4.Caption:= Kf.knK2SO4.caption +' ' + FloatToStr(round(Kf.gK2SO4.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glK2SO4.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlK2SO4.Value)+ ' '+grMlCap+') ';
+    Kf.k2nCaCl2.Caption:= Kf.knCaCl2.caption +' ' + FloatToStr(round(Kf.gCaCl2.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glCaCl2.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlCaCl2.Value)+ ' '+grMlCap+') ';
 
-    Kf.l2Cmplx.Caption:= Kf.lCmplx.caption +' ' + FloatToStr(round(Kf.gCmplx.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glCmplx.Value)+ ' г/л, '+FloatToStr(Kf.gmlCmplx.Value)+ ' г/мл)';
-    Kf.l2Fe.Caption:= Kf.lFe.caption +' ' + FloatToStr(round(Kf.gFe.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glFe.Value)+ ' г/л, '+FloatToStr(Kf.gmlFe.Value)+ ' г/мл)';
-    Kf.l2Mn.Caption:= Kf.lMn.caption +' ' + FloatToStr(round(Kf.gMn.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glMn.Value)+ ' г/л, '+FloatToStr(Kf.gmlMn.Value)+ ' г/мл)';
-    Kf.l2B.Caption:= Kf.lB.caption +' ' + FloatToStr(round(Kf.gB.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glB.Value)+ ' г/л, '+FloatToStr(Kf.gmlB.Value)+ ' г/мл)';
-    Kf.l2Zn.Caption:= Kf.lZn.caption +' ' + FloatToStr(round(Kf.gZn.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glZn.Value)+ ' г/л, '+FloatToStr(Kf.gmlZn.Value)+ ' г/мл)';
-    Kf.l2Cu.Caption:= Kf.lCu.caption +' ' + FloatToStr(round(Kf.gCu.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glCu.Value)+ ' г/л, '+FloatToStr(Kf.gmlCu.Value)+ ' г/мл)';
-    Kf.l2Mo.Caption:= Kf.lMo.caption +' ' + FloatToStr(round(Kf.gMo.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glMo.Value)+ ' г/л, '+FloatToStr(Kf.gmlMo.Value)+ ' г/мл)';
-    Kf.l2Co.Caption:= Kf.lCo.caption +' ' + FloatToStr(round(Kf.gCo.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glCo.Value)+ ' г/л, '+FloatToStr(Kf.gmlCo.Value)+ ' г/мл)';
-    Kf.l2Si.Caption:= Kf.lSi.caption +' ' + FloatToStr(round(Kf.gSi.value*1000)/1000) + ' г. ' + ' (' + FloatToStr(Kf.glSi.Value)+ ' г/л, '+FloatToStr(Kf.gmlSi.Value)+ ' г/мл)';
+    Kf.l2Cmplx.Caption:= Kf.lCmplx.caption +' ' + FloatToStr(round(Kf.gCmplx.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glCmplx.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlCmplx.Value)+ ' '+grMlCap+') ';
+    Kf.l2Fe.Caption:= Kf.lFe.caption +' ' + FloatToStr(round(Kf.gFe.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glFe.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlFe.Value)+ ' '+grMlCap+') ';
+    Kf.l2Mn.Caption:= Kf.lMn.caption +' ' + FloatToStr(round(Kf.gMn.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glMn.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlMn.Value)+ ' '+grMlCap+') ';
+    Kf.l2B.Caption:= Kf.lB.caption +' ' + FloatToStr(round(Kf.gB.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glB.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlB.Value)+ ' '+grMlCap+') ';
+    Kf.l2Zn.Caption:= Kf.lZn.caption +' ' + FloatToStr(round(Kf.gZn.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glZn.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlZn.Value)+ ' '+grMlCap+') ';
+    Kf.l2Cu.Caption:= Kf.lCu.caption +' ' + FloatToStr(round(Kf.gCu.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glCu.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlCu.Value)+ ' '+grMlCap+') ';
+    Kf.l2Mo.Caption:= Kf.lMo.caption +' ' + FloatToStr(round(Kf.gMo.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glMo.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlMo.Value)+ ' '+grMlCap+') ';
+    Kf.l2Co.Caption:= Kf.lCo.caption +' ' + FloatToStr(round(Kf.gCo.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glCo.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlCo.Value)+ ' '+grMlCap+') ';
+    Kf.l2Si.Caption:= Kf.lSi.caption +' ' + FloatToStr(round(Kf.gSi.value*1000)/1000) + grCap + ' (' + FloatToStr(Kf.glSi.Value)+ ' '+grLitCap+', '+FloatToStr(Kf.gmlSi.Value)+ ' '+grMlCap+') ';
 
 
     Av:=round((Kf.mlCaNO3.Value + Kf.mlKNO3.Value + Kf.mlNH4NO3.Value + Kf.mlMgNO3.Value + Kf.mlCaCl2.Value)*10000)/10000;
@@ -1675,8 +1746,8 @@ begin
     Aw:=round(Kf.tAml.value-Av);
     Aml:= round(Kf.tAml.value/Kf.V.value*1000)/1000;
 
-    Kf.sumA.Caption:='Объем: '+FloatToStr(Av)+' мл, '+'вес: '+FloatToStr(Am)+' гр,'+' плотность: '+FloatToStr(Ak)+' г/мл. ';
-    Kf.lVolA.Caption:='Концентрат A ('+ FloatToStr(Ac)+':1) . Долить воды: '+ FloatToStr(Aw) + 'мл. По ' + FloatToStr(Aml) + ' мл на 1л.';
+    Kf.sumA.Caption:=volCap+FloatToStr(Av)+' мл, '+'вес: '+FloatToStr(Am)+' гр,'+' плотность: '+FloatToStr(Ak)+' ' + grMlCap + '. ';
+    Kf.lVolA.Caption:=volACap+' ('+ FloatToStr(Ac)+':1). '+addWaterCap+ FloatToStr(Aw) + 'мл. По ' + FloatToStr(Aml) + ' мл на 1л.';
 
      vmlMgSO4:=Kf.mlMgSO4.Value;
      vmlKH2PO4:=Kf.mlKH2PO4.Value;
@@ -1707,8 +1778,8 @@ begin
      if (Kf.tBml.value <> 0) then Bc:=round(Kf.V.value/Kf.tBml.value*1000);
     Bw:=round(Kf.tBml.value-Bv);
     Bml:= round(Kf.tBml.value/Kf.V.value*1000)/1000;
-    Kf.sumB.Caption:='Объем: '+FloatToStr(round(Bv*10)/10)+' мл, '+'вес: '+FloatToStr(Bm)+' гр,'+ ' плотность: '+FloatToStr(Bk)+' г/мл';
-    Kf.lVolB.Caption:='Концентрат B ('+ FloatToStr(Bc)+':1) . Долить воды: '+ FloatToStr(Bw) + 'мл. По ' + FloatToStr(Bml) + ' мл на 1л.';
+    Kf.sumB.Caption:=VolCap+FloatToStr(round(Bv*10)/10)+' мл, '+'вес: '+FloatToStr(Bm)+' гр,'+ ' плотность: '+FloatToStr(Bk)+' г/мл';
+    Kf.lVolB.Caption:=volBCap+' ('+ FloatToStr(Bc)+':1). '+addWaterCap+ FloatToStr(Bw) + 'мл. По ' + FloatToStr(Bml) + ' мл на 1л.';
     //
 end;
 
@@ -1819,7 +1890,7 @@ gmSUM:=kf.gFe.value
     agSi:=( kf.Si.value * kf.V.value   )/ (gmSUM*10000);
 
    kf.gCmplx.value:= gmSUM;
-   kf.kMicro.text:=     'Состав: '
+   kf.kMicro.text:=     compositionCap
                        +'Fe=' + FloatToStr(round(agFe*1000)/1000)+'% '
                        +'Mn=' + FloatToStr(round(agMn*1000)/1000)+'% '
                        +'B=' + FloatToStr(round(agB*1000)/1000)+'% '
@@ -1874,7 +1945,7 @@ procedure microToWeght; begin
  if Kf.dCo.value >0 then Kf.gCo.value:=Kf.Co.value/Kf.dCo.value*Kf.V.value/10000 else Kf.gCo.value:=0;
  if Kf.dSi.value >0 then Kf.gSi.value:=Kf.Si.value/Kf.dSi.value*Kf.V.value/10000 else Kf.gSi.value:=0;
 
-  Kf.Fe.ReadOnly :=false;
+Kf.Fe.ReadOnly :=false;
 Kf.Mn.ReadOnly:=false;
 //Kf.B.ReadOnly:=false;
 Kf.Zn.ReadOnly:=false;
@@ -1894,7 +1965,7 @@ toMicrocomplex;
  else begin
 
 
- Kf.Fe.ReadOnly :=true;
+Kf.Fe.ReadOnly :=true;
 Kf.Mn.ReadOnly:=true;
 //Kf.B.ReadOnly:=false;
 Kf.Zn.ReadOnly:=true;
@@ -1909,7 +1980,7 @@ Kf.gFe.Visible :=false;
 Kf.gMn.Visible:=false;
 Kf.gB.Visible:=false;
 Kf.gZn.Visible:=false;
- Kf.gCu.Visible:=false;
+Kf.gCu.Visible:=false;
 Kf.gMo.Visible:=false;
 Kf.gMo.Visible:=false;
 Kf.gCo.Visible:=false;
@@ -1996,76 +2067,76 @@ begin
 if (Kf.CaNO3_NH4.value = 0) then begin
 
     case FloatToStr(round(Kf.CaNO3_Ca.value*10)/10,MyFormatSettings) of
-      '17':  Kf.nCaNO3.Caption:='Кальций азотнокислый Са(NО3)2*4H2O';
-      '20':  Kf.nCaNO3.Caption:='Кальций азотнокислый Ca(NO3)2*2H2O';
-      '24.4':  Kf.nCaNO3.Caption:='Кальций азотнокислый Ca(NO3)2';
-    else       Kf.nCaNO3.Caption:='Селитра кальциевая'
+      '17':  Kf.nCaNO3.Caption:=CaNO3Cap17;
+      '20':  Kf.nCaNO3.Caption:=CaNO3Cap20;
+      '24.4':  Kf.nCaNO3.Caption:=CaNO3Cap24;
+    else       Kf.nCaNO3.Caption:=CaNO3CapFert
        + ' CaO-' +floattostr(Round((Kf.CaNO3_Ca.value/0.714691)*10)/10)+'%'
        + ' N-' +floattostr(Round((Kf.CaNO3_NH4.value+Kf.CaNO3_NO3.value)*10)/10)+'%';
     end;
 end
 else begin
-      Kf.nCaNO3.Caption:='Селитра кальциевая'
+      Kf.nCaNO3.Caption:=CaNO3CapFert
        + ' CaO-' +floattostr(Round((Kf.CaNO3_Ca.value/0.714691)*10)/10)+'%'
        + ' N-' +floattostr(Round((Kf.CaNO3_NH4.value+Kf.CaNO3_NO3.value)*10)/10)+'%';
       end;
 
 // Селитра калиевая
 case FloatToStr(round(Kf.KNO3_K.value*10)/10,MyFormatSettings) of
-   '38.7':  Kf.nKNO3.Caption:='Калий азотнокислый KNO3';
+   '38.7':  Kf.nKNO3.Caption:=KNO3Cap;
  else
-   Kf.nKNO3.Caption:='Селитра калиевая'
+   Kf.nKNO3.Caption:=KNO3CapFert
    + ' K2O-' +floattostr(Round((Kf.KNO3_K.value/0.830148)*10)/10)+'%'
    + ' N-' +floattostr(Round((Kf.KNO3_NO3.value)*10)/10)+'%';
  end;
 
 // Селитра аммиачная
 case FloatToStr(round(Kf.NH4NO3_NO3.value*10)/10,MyFormatSettings) of
-   '17.5':  Kf.nNH4NO3.Caption:='Аммоний азотнокислый NH4NO3';
+   '17.5':  Kf.nNH4NO3.Caption:=NH4NO3Cap;
  else
-   Kf.nNH4NO3.Caption:='Селитра аммиачная'
+   Kf.nNH4NO3.Caption:=NH4NO3CapFert
 + ' N-' +floattostr(Round((Kf.NH4NO3_NH4.value+Kf.NH4NO3_NO3.value)*10)/10)+'%';
  end;
 // Сульфат магния
 case FloatToStr(round(Kf.MgSO4_Mg.value*10)/10,MyFormatSettings) of
-   '9.9':  Kf.nMgSO4.Caption:='Магний сернокислый MgSO4*7H2O';
-   '20.2':  Kf.nMgSO4.Caption:='Магний сернокислый MgSO4';
+   '9.9':  Kf.nMgSO4.Caption:=MgSO4Cap9;
+   '20.2':  Kf.nMgSO4.Caption:=MgSO4Cap20;
  else
-   Kf.nMgSO4.Caption:='Сульфат магния'
+   Kf.nMgSO4.Caption:=MgSO4CapFert
    + ' MgO-' +floattostr(Round((Kf.MgSO4_Mg.value/0.603036)*10)/10)+'%'
    + ' SO3-' +floattostr(Round((Kf.MgSO4_S.value/0.400496)*10)/10)+'%';
  end;
 // Монофосфат калия
 case FloatToStr(round(Kf.KH2PO4_K.value*10)/10,MyFormatSettings) of
-   '28.7':  Kf.nKH2PO4.Caption:='Калий фосфорнокислый KH2PO4';
+   '28.7':  Kf.nKH2PO4.Caption:=KH2PO4Cap;
  else
-   Kf.nKH2PO4.Caption:='Монофосфат калия'
+   Kf.nKH2PO4.Caption:=KH2PO4CapFert
    + ' K2O-' +floattostr(Round((Kf.KH2PO4_K.value/0.830148)*10)/10)+'%'
    + ' P2O5-' +floattostr(Round((Kf.KH2PO4_P.value/0.436421)*10)/10)+'%';
  end;
 // Сульфат калия
 case FloatToStr(round(Kf.K2SO4_K.value*10)/10,MyFormatSettings) of
-   '44.9':  Kf.nK2SO4.Caption:='Калий сернокислый K2SO4';
+   '44.9':  Kf.nK2SO4.Caption:=K2SO4Cap44;
  else
-   Kf.nK2SO4.Caption:='Сульфат калия'
+   Kf.nK2SO4.Caption:=K2SO4CapFert
    + ' K2O-' +floattostr(Round((Kf.K2SO4_K.value/0.830148)*10)/10)+'%'
    + ' SO3-' +floattostr(Round((Kf.K2SO4_S.value/0.400496)*10)/10)+'%';
  end;
 // Селитра магниевая
 case FloatToStr(round(Kf.MgNO3_Mg.value*10)/10,MyFormatSettings) of
-   '9.5':  Kf.nMgNO3.Caption:='Магний азотнокислый Mg(NO3)2*6H2O';
-   '16.4':  Kf.nMgNO3.Caption:='Магний азотнокислый Mg(NO3)2';
+   '9.5':  Kf.nMgNO3.Caption:=MgNO3Cap9;
+   '16.4':  Kf.nMgNO3.Caption:=MgNO3Cap16;
  else
-   Kf.nMgNO3.Caption:='Селитра магниевая'
+   Kf.nMgNO3.Caption:=MgNO3CapFert
     + ' MgO-' +floattostr(Round((Kf.MgNO3_Mg.value/0.603036)*10)/10)+'%'
     + ' N-' +floattostr(Round((Kf.MgNO3_NO3.value)*10)/10)+'%';
  end;
 // Хлорид кальция
 case FloatToStr(round(Kf.CaCl2_Ca.value*10)/10,MyFormatSettings) of
-   '18.3':  Kf.nCaCl2.Caption:='Хлорид кальция 6-водный CaCl2*6H2O';
-   '36.1':  Kf.nCaCl2.Caption:='Хлорид кальция безводный CaCl2';
+   '18.3':  Kf.nCaCl2.Caption:=CaCl2Cap18;
+   '36.1':  Kf.nCaCl2.Caption:=CaCl2Cap36;
  else
-   Kf.nCaCl2.Caption:='Кальций хлористый'
+   Kf.nCaCl2.Caption:=CaCl2CapFert
    + ' CaO-' +floattostr(Round((Kf.CaCl2_Ca.value/0.714691)*10)/10)+'%'
    + ' Cl-' +floattostr(Round((Kf.CaCl2_Cl.value)*10)/10)+'%';
  end;
@@ -2659,29 +2730,29 @@ begin
 
         Kf.N_2.value:= Kf.NO3_2.value  + Kf.NH4_2.value;
 
-     Kf.mkorr.Text:= 'ОСНОВНОЕ:';
-     Kf.mkorr.Lines.Add('Изменение объема на: '+ FloatToStr( round((Kf.V_2.value - Kf.V_1.value)/Kf.V_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Доля старого расвтора: '+ FloatToStr( round((Kf.V_1.value/Kf.V_2.value)*100))  +'%');
-     Kf.mkorr.Lines.Add('Изменение EC на: '+ FloatToStr( round((Kf.EC_2.value - Kf.EC_1.value)/Kf.EC_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Изменение N общий на: '+ FloatToStr( round((Kf.N_2.value - Kf.N_1.value)/Kf.N_1.value*100))  +'%');
+     Kf.mkorr.Text:= korrMainCap;
+     Kf.mkorr.Lines.Add(korrChangeVolBy+ FloatToStr( round((Kf.V_2.value - Kf.V_1.value)/Kf.V_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrOldSolShare+ FloatToStr( round((Kf.V_1.value/Kf.V_2.value)*100))  +'%');
+     Kf.mkorr.Lines.Add(korrChangeEC+ FloatToStr( round((Kf.EC_2.value - Kf.EC_1.value)/Kf.EC_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrChangeNOverBy+ FloatToStr( round((Kf.N_2.value - Kf.N_1.value)/Kf.N_1.value*100))  +'%');
 
           Kf.mkorr.Lines.add('');
-     Kf.mkorr.Lines.add('ПРОФИЛЬ:');
-     Kf.mkorr.Lines.Add('Коррекция NO3 на: '+ FloatToStr( round((Kf.NO3_2.value - Kf.NO3_1.value)/Kf.NO3_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Коррекция NH4 на: '+ FloatToStr( round((Kf.NH4_2.value - Kf.NH4_1.value)/Kf.NH4_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Коррекция P на: '+ FloatToStr( round((Kf.P_2.value - Kf.P_1.value)/Kf.P_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Коррекция K на: '+ FloatToStr( round((Kf.K_2.value - Kf.K_1.value)/Kf.K_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Коррекция Ca на: '+ FloatToStr( round((Kf.Ca_2.value - Kf.Ca_1.value)/Kf.Ca_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Коррекция Mg на: '+ FloatToStr( round((Kf.Mg_2.value - Kf.Mg_1.value)/Kf.Mg_1.value*100))  +'%');
-     Kf.mkorr.Lines.Add('Коррекция S на: '+ FloatToStr( round((Kf.S_2.value - Kf.S_1.value)))  +' ppm');
-     Kf.mkorr.Lines.Add('Коррекция Cl на: '+ FloatToStr( round((Kf.Cl_2.value - Kf.Cl_1.value)))  +' ppm');
+     Kf.mkorr.Lines.add(korrProfileCap);
+     Kf.mkorr.Lines.Add(korrKorrTxt+' NO3 '+korrByTxt+ FloatToStr( round((Kf.NO3_2.value - Kf.NO3_1.value)/Kf.NO3_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrKorrTxt+' NH4 '+korrByTxt+ FloatToStr( round((Kf.NH4_2.value - Kf.NH4_1.value)/Kf.NH4_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrKorrTxt+' P '+korrByTxt+ FloatToStr( round((Kf.P_2.value - Kf.P_1.value)/Kf.P_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrKorrTxt+' K '+korrByTxt+ FloatToStr( round((Kf.K_2.value - Kf.K_1.value)/Kf.K_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrKorrTxt+' Ca '+korrByTxt+ FloatToStr( round((Kf.Ca_2.value - Kf.Ca_1.value)/Kf.Ca_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrKorrTxt+' Mg '+korrByTxt+ FloatToStr( round((Kf.Mg_2.value - Kf.Mg_1.value)/Kf.Mg_1.value*100))  +'%');
+     Kf.mkorr.Lines.Add(korrKorrTxt+' S '+korrByTxt+ FloatToStr( round((Kf.S_2.value - Kf.S_1.value)))  +' ppm');
+     Kf.mkorr.Lines.Add(korrKorrTxt+' Cl '+korrByTxt+ FloatToStr( round((Kf.Cl_2.value - Kf.Cl_1.value)))  +' ppm');
 
           Kf.mkorr.Lines.add('');
-     Kf.mkorr.Lines.Add('СООТНОШЕНИЯ:');
-     Kf.mkorr.Lines.Add('NH4:NO3 до '+ FloatToStr( round( Kf.NH4_1.value/Kf.NO3_1.value*1000  )/1000)  +' после ' + FloatToStr( round( Kf.NH4_2.value/Kf.NO3_2.value*1000  )/1000));
-     Kf.mkorr.Lines.Add('K:N до '+ FloatToStr( round( Kf.K_1.value/Kf.N_1.value*1000  )/1000)  +' после ' + FloatToStr( round( Kf.K_2.value/Kf.N_2.value*1000  )/1000));
-     Kf.mkorr.Lines.Add('K:Ca до '+ FloatToStr( round( Kf.K_1.value/Kf.Ca_1.value*1000  )/1000)  +' после ' + FloatToStr( round( Kf.K_2.value/Kf.Ca_2.value*1000  )/1000));
-     Kf.mkorr.Lines.Add('K:Mg до '+ FloatToStr( round( Kf.K_1.value/Kf.Mg_1.value*1000  )/1000)  +' после ' + FloatToStr( round( Kf.K_2.value/Kf.Mg_2.value*1000  )/1000));
+     Kf.mkorr.Lines.Add(korrCorrelationsCap);
+     Kf.mkorr.Lines.Add('NH4:NO3 '+korrBefore+ FloatToStr( round( Kf.NH4_1.value/Kf.NO3_1.value*1000  )/1000)  +korrAfter + FloatToStr( round( Kf.NH4_2.value/Kf.NO3_2.value*1000  )/1000));
+     Kf.mkorr.Lines.Add('K:N '+korrBefore+ FloatToStr( round( Kf.K_1.value/Kf.N_1.value*1000  )/1000)  +korrAfter + FloatToStr( round( Kf.K_2.value/Kf.N_2.value*1000  )/1000));
+     Kf.mkorr.Lines.Add('K:Ca '+korrBefore+ FloatToStr( round( Kf.K_1.value/Kf.Ca_1.value*1000  )/1000)  +korrAfter + FloatToStr( round( Kf.K_2.value/Kf.Ca_2.value*1000  )/1000));
+     Kf.mkorr.Lines.Add('K:Mg '+korrBefore+ FloatToStr( round( Kf.K_1.value/Kf.Mg_1.value*1000  )/1000)  +korrAfter + FloatToStr( round( Kf.K_2.value/Kf.Mg_2.value*1000  )/1000));
 
 end;
 
@@ -3354,7 +3425,7 @@ procedure TKf.K2SO4_SClick(Sender: TObject);
 begin
         K2SO4_K.value:=(K2SO4_S.value*2*molK)/(molS);
 
-    nK2SO4.Caption:='Сульфат калия'
+    nK2SO4.Caption:=K2SO4CapFert
  + ' K2O-' +floattostr(Round((K2SO4_K.value/0.830148)*10)/10)+'%'
  + ' SO3-' +floattostr(Round((K2SO4_S.value/0.400496)*10)/10)+'%';
     CalcWeight ;
@@ -3411,7 +3482,7 @@ procedure TKf.KH2PO4_KClick(Sender: TObject);
 begin
     KH2PO4_P.value:=(KH2PO4_K.value*molP)/molK;
 
-    nKH2PO4.Caption:='Монофосфат калия'
+    nKH2PO4.Caption:=KH2PO4CapFert
  + ' K2O-' +floattostr(Round((KH2PO4_K.value/0.830148)*10)/10)+'%'
  + ' P2O5-' +floattostr(Round((KH2PO4_P.value/0.436421)*10)/10)+'%';
     CalcWeight ;
@@ -3433,7 +3504,7 @@ procedure TKf.KH2PO4_PClick(Sender: TObject);
 begin
       KH2PO4_K.value:=(KH2PO4_P.value*molK)/molP;
 
-    nKH2PO4.Caption:='Монофосфат калия'
+    nKH2PO4.Caption:=KH2PO4CapFert
  + ' K2O-' +floattostr(Round((KH2PO4_K.value/0.830148)*10)/10)+'%'
  + ' P2O5-' +floattostr(Round((KH2PO4_P.value/0.436421)*10)/10)+'%';
     CalcWeight ;
@@ -3482,7 +3553,7 @@ begin
   if ( KNO3_K.Focused = True )    then begin
      KNO3_NO3.value:=(KNO3_K.value*molN)/molK;
 
- //   nKNO3.Caption:='Селитра калиевая'
+ //   nKNO3.Caption:=KNO3CapFert
  //+ ' K2O-' +floattostr(Round((KNO3_K.value/0.830148)*10)/10)+'%'
  //+ ' N-' +floattostr(Round((KNO3_NO3.value)*10)/10)+'%';
     SoilName;
@@ -3512,7 +3583,7 @@ end;
 procedure TKf.KNO3_NO3Click(Sender: TObject);
 begin
   KNO3_K.value:=(KNO3_NO3.value*molK)/molN;
-       nKNO3.Caption:='Селитра калиевая'
+       nKNO3.Caption:=KNO3CapFert
  + ' K2O-' +floattostr(Round((KNO3_K.value/0.830148)*10)/10)+'%'
  + ' N-' +floattostr(Round((KNO3_NO3.value)*10)/10)+'%';
        CalcWeight ;
@@ -3862,17 +3933,6 @@ end;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 procedure TKf.TabSheet5ContextPopup(Sender: TObject; MousePos: TPoint;
   var Handled: Boolean);
 begin
@@ -3950,7 +4010,7 @@ begin
 
 
 de1.Text:=FormatDateTime('yyyy-mm-dd', Now);
-   m1.Text:='Корректор. Скорректирован раствор до ' + FloatToStr(V_2.Value) + ' литров.';
+   m1.Text:=m1TextCap + FloatToStr(V_2.Value) + ' '+m1TextLitersCap;
 
    //str:='date='+de1.Text+';'+m1.Text+';'+profile.Caption;
    str:='date='+de1.Text+';'+m1.Text+';'+
@@ -4132,7 +4192,7 @@ end;
 procedure TKf.Button9Click(Sender: TObject);
 begin
     de1.Text:=FormatDateTime('yyyy-mm-dd', Now);
-   m1.Text:='Автозапись. Изготовлен раствор на ' + FloatToStr(V.Value) + ' литров.';
+   m1.Text:=m1TextAutoCap + FloatToStr(V.Value) + ' '+m1TextLitersCap;
    str:='date='+de1.Text+';'+m1.Text+';'+profile.Caption;
    if not Assigned(DStr)then DStr := TStringList.Create;
    DStr.Add(StringReplace(str, #10, ' ', [rfReplaceAll, rfIgnoreCase]));
@@ -4451,7 +4511,7 @@ procedure TKf.CaNO3_CaChange(Sender: TObject);
 begin
   if ( CaNO3_Ca.Focused = True )    then begin
   CaNO3_NO3.value:= (2 * CaNO3_Ca.value *molN + CaNO3_NH4.value*molCa)/molCa  ;
-   // nCaNO3.Caption:='Селитра кальциевая'
+   // nCaNO3.Caption:=CaNO3CapFert
    //+ ' CaO-' +floattostr(Round((CaNO3_Ca.value/0.714691)*10)/10)+'%'
    //+ ' N-' +floattostr(Round((CaNO3_NH4.value+CaNO3_NO3.value)*10)/10)+'%';
     SoilName;
@@ -4478,7 +4538,7 @@ begin
   CaNO3_NO3.value:= (2 * CaNO3_Ca.value *molN + CaNO3_NH4.value*molCa)/molCa  ;
   CaNO3_Ca.value:= -molCa*( CaNO3_NH4.value - CaNO3_NO3.value)/(2*molN)  ;
 
-  nCaNO3.Caption:='Селитра кальциевая'
+  nCaNO3.Caption:=CaNO3CapFert
  + ' CaO-' +floattostr(Round((CaNO3_Ca.value/0.714691)*10)/10)+'%'
  + ' N-' +floattostr(Round((CaNO3_NH4.value+CaNO3_NO3.value)*10)/10)+'%';
         CalcWeight ;
@@ -4707,7 +4767,7 @@ begin
               end;
           end;
     end
-   else  ShowMessage('Не заполнено поле описание!');
+   else  ShowMessage(NoDescFieldError);
 
 
 
@@ -4989,7 +5049,7 @@ procedure TKf.NH4NO3_NH4Click(Sender: TObject);
 begin
   NH4NO3_NO3.value:=NH4NO3_NH4.value;
   if (NH4NO3_NO3.value/NH4NO3_NH4.value < 1000 ) then begin
-      nNH4NO3.Caption:='Селитра аммиачная'
+      nNH4NO3.Caption:=NH4NO3CapFert
    + ' N-' +floattostr(Round((NH4NO3_NH4.value+NH4NO3_NO3.value)*10)/10)+'%';
       CalcWeight ;
 
@@ -5001,7 +5061,7 @@ end;
 procedure TKf.NH4NO3_NO3Click(Sender: TObject);
 begin
   NH4NO3_NH4.value:=NH4NO3_NO3.value;
-        nNH4NO3.Caption:='Селитра аммиачная'
+        nNH4NO3.Caption:=NH4NO3CapFert
    + ' N-' +floattostr(Round((NH4NO3_NH4.value+NH4NO3_NO3.value)*10)/10)+'%';
         CalcWeight ;
 end;

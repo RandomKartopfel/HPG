@@ -1,0 +1,1464 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: tkf.addrmixer.text
+msgid "mixer.local"
+msgstr "mixer.local"
+
+#: tkf.bdst.caption
+msgctxt "tkf.bdst.caption"
+msgid "Заполнить"
+msgstr "Заповнити"
+
+#: tkf.bdst1.caption
+msgctxt "tkf.bdst1.caption"
+msgid "Заполнить"
+msgstr "Заповнити"
+
+#: tkf.bfile.caption
+msgctxt "tkf.bfile.caption"
+msgid "help"
+msgstr "help"
+
+#: tkf.bitcoin.editlabel.caption
+msgid "BITCOIN"
+msgstr "BITCOIN"
+
+#: tkf.bitcoin.text
+msgid "14TZ3jcaNcKqs2HKap5bYSvGuaSecZDC9q"
+msgstr "14TZ3jcaNcKqs2HKap5bYSvGuaSecZDC9q"
+
+#: tkf.bizg.caption
+msgctxt "tkf.bizg.caption"
+msgid "help"
+msgstr "help"
+
+#: tkf.bkorrect.caption
+msgctxt "tkf.bkorrect.caption"
+msgid "help"
+msgstr "help"
+
+#: tkf.bload.caption
+msgid "Вернуть составы"
+msgstr "Повернути состави"
+
+#: tkf.bloadpf.caption
+msgid "Вернуть профиль"
+msgstr "Повернути профіль"
+
+#: tkf.bmacro.caption
+msgctxt "tkf.bmacro.caption"
+msgid "help"
+msgstr "help"
+
+#: tkf.bmicro.caption
+msgctxt "tkf.bmicro.caption"
+msgid "help"
+msgstr "help"
+
+#: tkf.brasch.caption
+msgctxt "tkf.brasch.caption"
+msgid "help"
+msgstr "help"
+
+#: tkf.bsend.caption
+msgctxt "tkf.bsend.caption"
+msgid "В расчет"
+msgstr "До розр."
+
+#: tkf.bsend1.caption
+msgctxt "tkf.bsend1.caption"
+msgid "В расчет"
+msgstr "До розр."
+
+#: tkf.bsend2.caption
+msgctxt "tkf.bsend2.caption"
+msgid "В расчет"
+msgstr "До розр."
+
+#: tkf.bsend3.caption
+msgctxt "tkf.bsend3.caption"
+msgid "В расчет"
+msgstr "До розр."
+
+#: tkf.bsrc.caption
+msgctxt "tkf.bsrc.caption"
+msgid "Заполнить"
+msgstr "Заповнити"
+
+#: tkf.btch.caption
+msgid "Перевести в профиль"
+msgstr "Перевести у профіль"
+
+#: tkf.button1.caption
+msgid "Пересчет"
+msgstr "Перерахунок"
+
+#: tkf.button11.caption
+msgid "Поддержка"
+msgstr "Підтримка"
+
+#: tkf.button2.caption
+msgid "Изготовить"
+msgstr "Виготовити"
+
+#: tkf.button3.caption
+msgid "Открыть"
+msgstr "Відкрити"
+
+#: tkf.button4.caption
+msgid "Подгрузить удобрения"
+msgstr "Підвантажити добрива"
+
+#: tkf.button5.caption
+msgid "Подгрузить профиль"
+msgstr "Підвантажити профіль"
+
+#: tkf.button6.caption
+msgid "Сохранить как"
+msgstr "Зберегти як"
+
+#: tkf.button7.caption
+msgid "Принять профиль из журнала"
+msgstr "Взяти профіль з журналу"
+
+#: tkf.button8.caption
+msgid "Обновить"
+msgstr "Оновити"
+
+#: tkf.button9.caption
+msgid "Внести в журнал"
+msgstr "Внести до журналу"
+
+#: tkf.caption
+msgid "Hydroponic Profile Generator (HPG)"
+msgstr "Hydroponic Profile Generator (HPG)"
+
+#: tkf.chkcomplex.caption
+msgid "Комплекс по бору"
+msgstr "Комплекс по бору"
+
+#: tkf.cnb.caption
+msgctxt "tkf.cnb.caption"
+msgid "Бор (%)"
+msgstr "Бор (%)"
+
+#: tkf.cncacl2.caption
+msgid "Кальция хлорид (ч.)"
+msgstr "Кальцію хлорид (ч.)"
+
+#: tkf.cncano3.caption
+msgctxt "tkf.cncano3.caption"
+msgid "Кальций азотнокислый 4-водный  (ч.)"
+msgstr "Кальцій азотнокислий 4-водний (ч.)"
+
+#: tkf.cncmplx.caption
+msgctxt "tkf.cncmplx.caption"
+msgid "Комплекс микроэлементов"
+msgstr "Комплекс мікроелементів "
+
+#: tkf.cnco.caption
+msgctxt "tkf.cnco.caption"
+msgid "Кобальт (%)"
+msgstr "Кобальт (%)"
+
+#: tkf.cncu.caption
+msgctxt "tkf.cncu.caption"
+msgid "Медь (%)"
+msgstr "Мідь (%)"
+
+#: tkf.cnfe.caption
+msgctxt "tkf.cnfe.caption"
+msgid "Железо (%)"
+msgstr "Залізо (%)"
+
+#: tkf.cnk2so4.caption
+msgctxt "tkf.cnk2so4.caption"
+msgid "Калий сернокислый безводный (ч.)"
+msgstr "Калій сірчанокислий безводний (ч.)"
+
+#: tkf.cnkh2po4.caption
+msgctxt "tkf.cnkh2po4.caption"
+msgid "Калий фосфорнокислый 1-замещенный (ч.)"
+msgstr "Калій фосфорнокислий 1-заміщений (ч.)"
+
+#: tkf.cnkno3.caption
+msgctxt "tkf.cnkno3.caption"
+msgid "Калий азотнокислый (ч.)"
+msgstr "Калій азотнокислий (ч.)"
+
+#: tkf.cnmgno3.caption
+msgctxt "tkf.cnmgno3.caption"
+msgid "Магний азотнокислый 6-водный (ч.)"
+msgstr "Магній азотнокислий 6-водний (ч.)"
+
+#: tkf.cnmgso4.caption
+msgctxt "tkf.cnmgso4.caption"
+msgid "Магний сернокислый 7-водный (ч.)"
+msgstr "Магній сірчанокислий 7-водний (ч.)"
+
+#: tkf.cnmn.caption
+msgctxt "tkf.cnmn.caption"
+msgid "Марганец (%)"
+msgstr "Марганець (%)"
+
+#: tkf.cnmo.caption
+msgctxt "tkf.cnmo.caption"
+msgid "Молибден (%)"
+msgstr "Молібден (%)"
+
+#: tkf.cnnh4no3.caption
+msgctxt "tkf.cnnh4no3.caption"
+msgid "Аммоний азотнокислый (ч.)"
+msgstr "Амоній азотнокислий (ч.)"
+
+#: tkf.cnsi.caption
+msgctxt "tkf.cnsi.caption"
+msgid "Кремний (%)"
+msgstr "Кремній (%)"
+
+#: tkf.cnzn.caption
+msgctxt "tkf.cnzn.caption"
+msgid "Цинк (%)"
+msgstr "Цинк (%)"
+
+#: tkf.dateadd.caption
+msgid "Добавить в журнал"
+msgstr "Додати в журнал"
+
+#: tkf.datechange.caption
+msgid "Удалить"
+msgstr "Видалити"
+
+#: tkf.de1.text
+msgid "de1"
+msgstr "de1"
+
+#: tkf.ecomment.text
+msgid "По умолчанию"
+msgstr "За замовчуванням"
+
+#: tkf.efilename.text
+msgid "default.hpg"
+msgstr "default.hpg"
+
+#: tkf.k2ncacl2.caption
+msgctxt "tkf.k2ncacl2.caption"
+msgid "Магний азотнокислый 6-водный (ч.)"
+msgstr "Магній азотнокислий 6-водний (ч.)"
+
+#: tkf.k2ncano3.caption
+msgctxt "tkf.k2ncano3.caption"
+msgid "Кальций азотнокислый 4-водный  (ч.)"
+msgstr "Кальцій азотнокислий 4-водний (ч.)"
+
+#: tkf.k2nk2so4.caption
+msgctxt "tkf.k2nk2so4.caption"
+msgid "Калий сернокислый безводный (ч.)"
+msgstr "Калій сірчанокислий безводний (ч.)"
+
+#: tkf.k2nkh2po4.caption
+msgctxt "tkf.k2nkh2po4.caption"
+msgid "Калий фосфорнокислый 1-замещенный (ч.)"
+msgstr "Калій фосфорнокислий 1-заміщений (ч.)"
+
+#: tkf.k2nkno3.caption
+msgctxt "tkf.k2nkno3.caption"
+msgid "Калий азотнокислый (ч.)"
+msgstr "Калій азотнокислий (ч.)"
+
+#: tkf.k2nmgno3.caption
+msgctxt "tkf.k2nmgno3.caption"
+msgid "Магний азотнокислый 6-водный (ч.)"
+msgstr "Магній азотнокислий 6-водний (ч.)"
+
+#: tkf.k2nmgso4.caption
+msgctxt "tkf.k2nmgso4.caption"
+msgid "Магний сернокислый 7-водный (ч.)"
+msgstr "Магній сірчанокислий 7-водний (ч.)"
+
+#: tkf.k2nnh4no3.caption
+msgctxt "tkf.k2nnh4no3.caption"
+msgid "Аммоний азотнокислый (ч.)"
+msgstr "Амоній азотнокислий (ч.)"
+
+#: tkf.kncacl2.caption
+msgid "Хлорид кальция 6-водный (ч.)"
+msgstr "Хлорид кальцію 6-водний (ч.)"
+
+#: tkf.kncano3.caption
+msgctxt "tkf.kncano3.caption"
+msgid "Кальций азотнокислый 4-водный  (ч.)"
+msgstr "Кальцій азотнокислий 4-водний (ч.)"
+
+#: tkf.knk2so4.caption
+msgctxt "tkf.knk2so4.caption"
+msgid "Калий сернокислый безводный (ч.)"
+msgstr "Калій сірчанокислий безводний (ч.)"
+
+#: tkf.knkh2po4.caption
+msgctxt "tkf.knkh2po4.caption"
+msgid "Калий фосфорнокислый 1-замещенный (ч.)"
+msgstr "Калій фосфорнокислий 1-заміщений (ч.)"
+
+#: tkf.knkno3.caption
+msgctxt "tkf.knkno3.caption"
+msgid "Калий азотнокислый (ч.)"
+msgstr "Калій азотнокислий (ч.)"
+
+#: tkf.knmgno3.caption
+msgctxt "tkf.knmgno3.caption"
+msgid "Магний азотнокислый 6-водный (ч.)"
+msgstr "Магній азотнокислий 6-водний (ч.)"
+
+#: tkf.knmgso4.caption
+msgctxt "tkf.knmgso4.caption"
+msgid "Магний сернокислый 7-водный (ч.)"
+msgstr "Магній сірчанокислий 7-водний (ч.)"
+
+#: tkf.knnh4no3.caption
+msgctxt "tkf.knnh4no3.caption"
+msgid "Аммоний азотнокислый (ч.)"
+msgstr "Амоній азотнокислий (ч.)"
+
+#: tkf.l2b.caption
+msgctxt "tkf.l2b.caption"
+msgid "Бор (%)"
+msgstr "Бор (%)"
+
+#: tkf.l2cmplx.caption
+msgctxt "tkf.l2cmplx.caption"
+msgid "Комплекс микроэлементов"
+msgstr "Комплекс мікроелементів "
+
+#: tkf.l2co.caption
+msgctxt "tkf.l2co.caption"
+msgid "Кобальт (%)"
+msgstr "Кобальт (%)"
+
+#: tkf.l2cu.caption
+msgctxt "tkf.l2cu.caption"
+msgid "Медь (%)"
+msgstr "Мідь (%)"
+
+#: tkf.l2fe.caption
+msgctxt "tkf.l2fe.caption"
+msgid "Железо (%)"
+msgstr "Залізо (%)"
+
+#: tkf.l2mn.caption
+msgctxt "tkf.l2mn.caption"
+msgid "Марганец (%)"
+msgstr "Марганець (%)"
+
+#: tkf.l2mo.caption
+msgctxt "tkf.l2mo.caption"
+msgid "Молибден (%)"
+msgstr "Молібден (%)"
+
+#: tkf.l2si.caption
+msgctxt "tkf.l2si.caption"
+msgid "Кремний (%)"
+msgstr "Кремній (%)"
+
+#: tkf.l2zn.caption
+msgctxt "tkf.l2zn.caption"
+msgid "Цинк (%)"
+msgstr "Цинк (%)"
+
+#: tkf.label1.caption
+msgid "Макропрофиль в мг/л (ppm)"
+msgstr "Макропрофіль в мг/л (ppm)"
+
+#: tkf.label10.caption
+msgctxt "tkf.label10.caption"
+msgid "N"
+msgstr "N"
+
+#: tkf.label100.caption
+msgctxt "tkf.label100.caption"
+msgid "K"
+msgstr "K"
+
+#: tkf.label101.caption
+msgctxt "tkf.label101.caption"
+msgid "Ca"
+msgstr "Ca"
+
+#: tkf.label102.caption
+msgctxt "tkf.label102.caption"
+msgid "Mg"
+msgstr "Mg"
+
+#: tkf.label103.caption
+msgctxt "tkf.label103.caption"
+msgid "S"
+msgstr "S"
+
+#: tkf.label104.caption
+msgctxt "tkf.label104.caption"
+msgid "NO3"
+msgstr "NO3"
+
+#: tkf.label105.caption
+msgid "Объем"
+msgstr "Об`єм"
+
+#: tkf.label106.caption
+msgctxt "tkf.label106.caption"
+msgid "Cl"
+msgstr "Cl"
+
+#: tkf.label107.caption
+msgctxt "tkf.label107.caption"
+msgid "NH4"
+msgstr "NH4"
+
+#: tkf.label108.caption
+msgid "Исходный"
+msgstr "Початковий"
+
+#: tkf.label109.caption
+msgid "Антагонизм"
+msgstr "Антагонізм "
+
+#: tkf.label11.caption
+msgctxt "tkf.label11.caption"
+msgid "P"
+msgstr "P"
+
+#: tkf.label110.caption
+msgctxt "tkf.label110.caption"
+msgid "EC"
+msgstr "EC"
+
+#: tkf.label111.caption
+msgid "Текущий"
+msgstr "Поточний"
+
+#: tkf.label112.caption
+msgid "Корректирующий"
+msgstr "Коригуючий"
+
+#: tkf.label113.caption
+msgid "Стимуляция"
+msgstr "Стимуляція"
+
+#: tkf.label114.caption
+msgid "Итоговый"
+msgstr "Результуючий "
+
+#: tkf.label115.caption
+msgid "Протокол коррекции"
+msgstr "Протокол корекції "
+
+#: tkf.label12.caption
+msgctxt "tkf.label12.caption"
+msgid "K"
+msgstr "K"
+
+#: tkf.label13.caption
+msgctxt "tkf.label13.caption"
+msgid "Ca"
+msgstr "Ca"
+
+#: tkf.label14.caption
+msgctxt "tkf.label14.caption"
+msgid "Mg"
+msgstr "Mg"
+
+#: tkf.label15.caption
+msgctxt "tkf.label15.caption"
+msgid "S"
+msgstr "S"
+
+#: tkf.label16.caption
+msgctxt "tkf.label16.caption"
+msgid "N"
+msgstr "N"
+
+#: tkf.label17.caption
+msgctxt "tkf.label17.caption"
+msgid "P"
+msgstr "P"
+
+#: tkf.label18.caption
+msgctxt "tkf.label18.caption"
+msgid "K"
+msgstr "K"
+
+#: tkf.label19.caption
+msgctxt "tkf.label19.caption"
+msgid "Ca"
+msgstr "Ca"
+
+#: tkf.label2.caption
+msgctxt "tkf.label2.caption"
+msgid "N"
+msgstr "N"
+
+#: tkf.label20.caption
+msgctxt "tkf.label20.caption"
+msgid "Mg"
+msgstr "Mg"
+
+#: tkf.label21.caption
+msgctxt "tkf.label21.caption"
+msgid "S"
+msgstr "S"
+
+#: tkf.label22.caption
+msgctxt "tkf.label22.caption"
+msgid "EC"
+msgstr "EC"
+
+#: tkf.label23.caption
+msgctxt "tkf.label23.caption"
+msgid "1"
+msgstr "1"
+
+#: tkf.label24.caption
+msgctxt "tkf.label24.caption"
+msgid "1"
+msgstr "1"
+
+#: tkf.label25.caption
+msgctxt "tkf.label25.caption"
+msgid "1"
+msgstr "1"
+
+#: tkf.label26.caption
+msgctxt "tkf.label26.caption"
+msgid "1"
+msgstr "1"
+
+#: tkf.label27.caption
+msgctxt "tkf.label27.caption"
+msgid "1"
+msgstr "1"
+
+#: tkf.label3.caption
+msgctxt "tkf.label3.caption"
+msgid "P"
+msgstr "P"
+
+#: tkf.label30.caption
+msgid "Раствор А"
+msgstr "Розчин А"
+
+#: tkf.label31.caption
+msgid "Fe"
+msgstr "Fe"
+
+#: tkf.label32.caption
+msgid "Mn"
+msgstr "Mn"
+
+#: tkf.label33.caption
+msgid "B"
+msgstr "B"
+
+#: tkf.label34.caption
+msgid "Cu"
+msgstr "Cu"
+
+#: tkf.label35.caption
+msgid "Zn"
+msgstr "Zn"
+
+#: tkf.label36.caption
+msgid "Объем в литрах"
+msgstr "Об`єм у літрах"
+
+#: tkf.label37.caption
+msgctxt "tkf.label37.caption"
+msgid "NО3"
+msgstr "NО3"
+
+#: tkf.label38.caption
+msgctxt "tkf.label38.caption"
+msgid "NО3"
+msgstr "NО3"
+
+#: tkf.label39.caption
+msgctxt "tkf.label39.caption"
+msgid "NО3"
+msgstr "NО3"
+
+#: tkf.label4.caption
+msgctxt "tkf.label4.caption"
+msgid "K"
+msgstr "K"
+
+#: tkf.label40.caption
+msgctxt "tkf.label40.caption"
+msgid "NH4"
+msgstr "NH4"
+
+#: tkf.label41.caption
+msgctxt "tkf.label41.caption"
+msgid "Ca"
+msgstr "Ca"
+
+#: tkf.label42.caption
+msgctxt "tkf.label42.caption"
+msgid "Mg"
+msgstr "Mg"
+
+#: tkf.label43.caption
+msgctxt "tkf.label43.caption"
+msgid "K"
+msgstr "K"
+
+#: tkf.label44.caption
+msgctxt "tkf.label44.caption"
+msgid "P"
+msgstr "P"
+
+#: tkf.label45.caption
+msgctxt "tkf.label45.caption"
+msgid "S"
+msgstr "S"
+
+#: tkf.label46.caption
+msgctxt "tkf.label46.caption"
+msgid "NH4"
+msgstr "NH4"
+
+#: tkf.label47.caption
+msgctxt "tkf.label47.caption"
+msgid "K"
+msgstr "K"
+
+#: tkf.label48.caption
+msgctxt "tkf.label48.caption"
+msgid "K"
+msgstr "K"
+
+#: tkf.label49.caption
+msgctxt "tkf.label49.caption"
+msgid "S"
+msgstr "S"
+
+#: tkf.label5.caption
+msgctxt "tkf.label5.caption"
+msgid "Ca"
+msgstr "Ca"
+
+#: tkf.label50.caption
+msgctxt "tkf.label50.caption"
+msgid "%"
+msgstr "%"
+
+#: tkf.label51.caption
+msgctxt "tkf.label51.caption"
+msgid "%"
+msgstr "%"
+
+#: tkf.label52.caption
+msgctxt "tkf.label52.caption"
+msgid "%"
+msgstr "%"
+
+#: tkf.label53.caption
+msgid "грамм"
+msgstr "грам"
+
+#: tkf.label54.caption
+msgctxt "tkf.label54.caption"
+msgid "Mg"
+msgstr "Mg"
+
+#: tkf.label55.caption
+msgctxt "tkf.label55.caption"
+msgid "NO3"
+msgstr "NO3"
+
+#: tkf.label56.caption
+msgid "Mo"
+msgstr "Mo"
+
+#: tkf.label57.caption
+msgid "Co"
+msgstr "Co"
+
+#: tkf.label58.caption
+msgid "Si"
+msgstr "Si"
+
+#: tkf.label59.caption
+msgid "Раствор B"
+msgstr "Розчин B"
+
+#: tkf.label6.caption
+msgctxt "tkf.label6.caption"
+msgid "Mg"
+msgstr "Mg"
+
+#: tkf.label60.caption
+msgctxt "tkf.label60.caption"
+msgid "Железо (%)"
+msgstr "Залізо (%)"
+
+#: tkf.label61.caption
+msgctxt "tkf.label61.caption"
+msgid "Марганец (%)"
+msgstr "Марганець (%)"
+
+#: tkf.label62.caption
+msgctxt "tkf.label62.caption"
+msgid "Бор (%)"
+msgstr "Бор (%)"
+
+#: tkf.label63.caption
+msgctxt "tkf.label63.caption"
+msgid "Цинк (%)"
+msgstr "Цинк (%)"
+
+#: tkf.label64.caption
+msgctxt "tkf.label64.caption"
+msgid "Медь (%)"
+msgstr "Мідь (%)"
+
+#: tkf.label65.caption
+msgctxt "tkf.label65.caption"
+msgid "Молибден (%)"
+msgstr "Молібден (%)"
+
+#: tkf.label66.caption
+msgctxt "tkf.label66.caption"
+msgid "Кобальт (%)"
+msgstr "Кобальт (%)"
+
+#: tkf.label67.caption
+msgctxt "tkf.label67.caption"
+msgid "Кремний (%)"
+msgstr "Кремній (%)"
+
+#: tkf.label68.caption
+msgid "доля (%)"
+msgstr "частка (%)"
+
+#: tkf.label69.caption
+msgid "граммы"
+msgstr "грами"
+
+#: tkf.label7.caption
+msgctxt "tkf.label7.caption"
+msgid "S"
+msgstr "S"
+
+#: tkf.label70.caption
+msgid "Помпа"
+msgstr "Помпа"
+
+#: tkf.label71.caption
+msgid "Ручн."
+msgstr "Ручн."
+
+#: tkf.label72.caption
+msgid "жидк (гр.)"
+msgstr "рідк (гр.)"
+
+#: tkf.label73.caption
+msgid "Микропрофиль в мкг/л"
+msgstr "Мікропрофіль в мкг/л"
+
+#: tkf.label74.caption
+msgid "План изготовления жидкими монорастворами"
+msgstr "План виготовлення рідкими монорозчинами"
+
+#: tkf.label75.caption
+msgid "Расчет монорастворов и концентратов"
+msgstr "Розрахунок монорозчинів та концентратів "
+
+#: tkf.label76.caption
+msgid "Расчет навесок микроэлементов"
+msgstr "Розрахунок наважок мікроелементів"
+
+#: tkf.label77.caption
+msgid "Расчет макропрофиля и навесок солей"
+msgstr "Розрахунок макропрофіля та наважок солей"
+
+#: tkf.label78.caption
+msgctxt "tkf.label78.caption"
+msgid "Составы солей"
+msgstr "Cполуки солей"
+
+#: tkf.label79.caption
+msgctxt "tkf.label79.caption"
+msgid "Составы солей"
+msgstr "Cполуки солей"
+
+#: tkf.label8.caption
+msgctxt "tkf.label8.caption"
+msgid "NO3"
+msgstr "NO3"
+
+#: tkf.label80.caption
+msgid "Имя файла:"
+msgstr "Ім'я файлу:"
+
+#: tkf.label81.caption
+msgctxt "tkf.label81.caption"
+msgid "Описание:"
+msgstr "Опис:"
+
+#: tkf.label82.caption
+msgid "Профиль в журнале:"
+msgstr "Профіль у журналі:"
+
+#: tkf.label83.caption
+msgid "Дата:"
+msgstr "Дата:"
+
+#: tkf.label84.caption
+msgid "Параметры сохранения"
+msgstr "Параметри збереження"
+
+#: tkf.label85.caption
+msgid "Журнал действий"
+msgstr "Журнал дій"
+
+#: tkf.label86.caption
+msgctxt "tkf.label86.caption"
+msgid "Описание:"
+msgstr "Опис:"
+
+#: tkf.label87.caption
+msgid "Тара А (мл)"
+msgstr "Тара А (мл)"
+
+#: tkf.label88.caption
+msgid "Тара B (мл)"
+msgstr "Тара B (мл)"
+
+#: tkf.label89.caption
+msgid "Матрица соотношений элементов"
+msgstr "Матриця співвідношень елементів"
+
+#: tkf.label9.caption
+msgctxt "tkf.label9.caption"
+msgid "NH4"
+msgstr "NH4"
+
+#: tkf.label90.caption
+msgid "Солей в граммах:"
+msgstr "Солей у грамах:"
+
+#: tkf.label91.caption
+msgid "Цена за 1 грамм"
+msgstr "Вартість за 1 грам"
+
+#: tkf.label92.caption
+msgctxt "tkf.label92.caption"
+msgid "Cl"
+msgstr "Cl"
+
+#: tkf.label93.caption
+msgctxt "tkf.label93.caption"
+msgid "Ca"
+msgstr "Ca"
+
+#: tkf.label94.caption
+msgctxt "tkf.label94.caption"
+msgid "Cl"
+msgstr "Cl"
+
+#: tkf.label95.caption
+msgid "Разведение микроэлементов в воде (жидкий концентрат микроэлементов)"
+msgstr "Розведення мікроелементів у воді (рідкий концентрат мікроелементів)"
+
+#: tkf.label96.caption
+msgid "Объем до (мл):"
+msgstr "Об`єм до (мл):"
+
+#: tkf.label97.caption
+msgid ""
+"Если вам нравится проект, то вы можете оказать ему финансовую поддержку "
+"несколькими вариантами:"
+msgstr ""
+"Якщо вам подобається проект, то ви можете надати йому фінансову підтримку "
+"кількома способами: "
+
+#: tkf.label98.caption
+msgctxt "tkf.label98.caption"
+msgid "N"
+msgstr "N"
+
+#: tkf.label99.caption
+msgctxt "tkf.label99.caption"
+msgid "P"
+msgstr "P"
+
+#: tkf.lb.caption
+msgctxt "tkf.lb.caption"
+msgid "Бор (%)"
+msgstr "Бор (%)"
+
+#: tkf.lcmplx.caption
+msgctxt "tkf.lcmplx.caption"
+msgid "Комплекс микроэлементов"
+msgstr "Комплекс мікроелементів "
+
+#: tkf.lco.caption
+msgctxt "tkf.lco.caption"
+msgid "Кобальт (%)"
+msgstr "Кобальт (%)"
+
+#: tkf.lcu.caption
+msgctxt "tkf.lcu.caption"
+msgid "Медь (%)"
+msgstr "Мідь (%)"
+
+#: tkf.lfe.caption
+msgctxt "tkf.lfe.caption"
+msgid "Железо (%)"
+msgstr "Залізо (%)"
+
+#: tkf.lmicro.text
+msgid "lMicro"
+msgstr "lMicro"
+
+#: tkf.lmn.caption
+msgctxt "tkf.lmn.caption"
+msgid "Марганец (%)"
+msgstr "Марганець (%)"
+
+#: tkf.lmo.caption
+msgctxt "tkf.lmo.caption"
+msgid "Молибден (%)"
+msgstr "Молібден (%)"
+
+#: tkf.lprice.caption
+msgid "lprice"
+msgstr "lprice"
+
+#: tkf.lsi.caption
+msgctxt "tkf.lsi.caption"
+msgid "Кремний (%)"
+msgstr "Кремній (%)"
+
+#: tkf.lvola.caption
+msgid "Тара А"
+msgstr "Тара А"
+
+#: tkf.lvolb.caption
+msgid "Тара B"
+msgstr "Тара B"
+
+#: tkf.lzn.caption
+msgctxt "tkf.lzn.caption"
+msgid "Цинк (%)"
+msgstr "Цинк (%)"
+
+#: tkf.m1.hint
+msgid "Описание события"
+msgstr "Опис події"
+
+#: tkf.mcano3.text
+msgid "p1"
+msgstr "p1"
+
+#: tkf.mcmplx.text
+msgid "p7"
+msgstr "p7"
+
+#: tkf.mk2so4.text
+msgid "p6"
+msgstr "p6"
+
+#: tkf.mkh2po4.text
+msgid "p5"
+msgstr "p5"
+
+#: tkf.mkno3.text
+msgid "p2"
+msgstr "p2"
+
+#: tkf.mmgso4.text
+msgid "p4"
+msgstr "p4"
+
+#: tkf.mnh4no3.text
+msgid "p3"
+msgstr "p3"
+
+#: tkf.ncacl2.caption
+msgid "Хлорид кальция 6-водный (ч)"
+msgstr "Хлорид кальцію 6-водний (ч.)"
+
+#: tkf.ncano3.caption
+msgctxt "tkf.ncano3.caption"
+msgid "Кальций азотнокислый 4-водный  (ч.)"
+msgstr "Кальцій азотнокислий 4-водний (ч.)"
+
+#: tkf.nh4no3.hint
+msgid "NH4:NO3"
+msgstr "NH4:NO3"
+
+#: tkf.nk2so4.caption
+msgctxt "tkf.nk2so4.caption"
+msgid "Калий сернокислый безводный (ч.)"
+msgstr "Калій сірчанокислий безводний (ч.)"
+
+#: tkf.nkh2po4.caption
+msgctxt "tkf.nkh2po4.caption"
+msgid "Калий фосфорнокислый 1-замещенный (ч.)"
+msgstr "Калій фосфорнокислий 1-заміщений (ч.)"
+
+#: tkf.nkno3.caption
+msgctxt "tkf.nkno3.caption"
+msgid "Калий азотнокислый (ч.)"
+msgstr "Калій азотнокислий (ч.)"
+
+#: tkf.nmgno3.caption
+msgctxt "tkf.nmgno3.caption"
+msgid "Магний азотнокислый 6-водный (ч.)"
+msgstr "Магній азотнокислий 6-водний (ч.)"
+
+#: tkf.nmgso4.caption
+msgctxt "tkf.nmgso4.caption"
+msgid "Магний сернокислый 7-водный (ч.)"
+msgstr "Магній сірчанокислий 7-водний (ч.)"
+
+#: tkf.nnh4no3.caption
+msgctxt "tkf.nnh4no3.caption"
+msgid "Аммоний азотнокислый (ч.)"
+msgstr "Амоній азотнокислий (ч.)"
+
+#: tkf.np.hint
+msgid "N:P"
+msgstr "N:P"
+
+#: tkf.pka.caption
+msgid "N:P:K:Ca:Mg:S:Cl"
+msgstr "N:P:K:Ca:Mg:S:Cl"
+
+#: tkf.pkf.caption
+msgid "K/Mg K/Ca K/N Ca/N"
+msgstr "K/Mg K/Ca K/N Ca/N"
+
+#: tkf.profile.text
+msgid "profile"
+msgstr "profile"
+
+#: tkf.rb.caption
+msgctxt "tkf.rb.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rca.caption
+msgctxt "tkf.rca.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rcl.caption
+msgctxt "tkf.rcl.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rco.caption
+msgctxt "tkf.rco.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rcu.caption
+msgctxt "tkf.rcu.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rfe.caption
+msgctxt "tkf.rfe.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rk.caption
+msgctxt "tkf.rk.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rmg.caption
+msgctxt "tkf.rmg.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rmn.caption
+msgctxt "tkf.rmn.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rmo.caption
+msgctxt "tkf.rmo.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rn.caption
+msgctxt "tkf.rn.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rnh4.caption
+msgctxt "tkf.rnh4.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rno3.caption
+msgctxt "tkf.rno3.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rp.caption
+msgctxt "tkf.rp.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rs.caption
+msgctxt "tkf.rs.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rsi.caption
+msgctxt "tkf.rsi.caption"
+msgid " "
+msgstr " "
+
+#: tkf.rzn.caption
+msgctxt "tkf.rzn.caption"
+msgid " "
+msgstr " "
+
+#: tkf.save.caption
+msgid "Сохранить"
+msgstr "Зберегти"
+
+#: tkf.statictext1.caption
+msgctxt "tkf.statictext1.caption"
+msgid "г/л"
+msgstr "г/л"
+
+#: tkf.statictext2.caption
+msgctxt "tkf.statictext2.caption"
+msgid "г/мл"
+msgstr "г/мл"
+
+#: tkf.statictext3.caption
+msgid "мл"
+msgstr "мл"
+
+#: tkf.statictext4.caption
+msgid "гр. жидк."
+msgstr "гр. рідин."
+
+#: tkf.suma.caption
+msgctxt "tkf.suma.caption"
+msgid "ИТОГО"
+msgstr "ЗАГАЛОМ"
+
+#: tkf.sumb.caption
+msgctxt "tkf.sumb.caption"
+msgid "ИТОГО"
+msgstr "ЗАГАЛОМ"
+
+#: tkf.tabsheet1.caption
+msgid "Макро"
+msgstr "Макро"
+
+#: tkf.tabsheet2.caption
+msgid "Микро"
+msgstr "Мікро"
+
+#: tkf.tabsheet3.caption
+msgid "Концентраты"
+msgstr "Концентрати"
+
+#: tkf.tabsheet4.caption
+msgid "Файл"
+msgstr "Файл"
+
+#: tkf.tabsheet5.caption
+msgid "Расчет"
+msgstr "Розрахунок"
+
+#: tkf.tabsheet6.caption
+msgid "Изготовление"
+msgstr "Виготовлення"
+
+#: tkf.tabsheet7.caption
+msgid "Цена"
+msgstr "Вартість"
+
+#: tkf.tabsheet8.caption
+msgid "Справка"
+msgstr "Довідка"
+
+#: tkf.tabsheet9.caption
+msgid "Корректор"
+msgstr "Коректор"
+
+#: tkf.togglebox1.caption
+msgid "Документация"
+msgstr "Документація"
+
+#: tkf.togglebox2.caption
+msgid "Обновление"
+msgstr "Оновлення"
+
+#: tkf.togglebox3.caption
+msgid "Сообщить об ошибке"
+msgstr "Повідомити про помилку"
+
+#: tkf.tojrnl.caption
+msgid "В журнал"
+msgstr "До журналу"
+
+#: tkf.version.caption
+msgid "Hydroponic Profile Generator 0.216"
+msgstr "Hydroponic Profile Generator 0.216"
+
+#: unit1.addwatercap
+msgid "Долить воды: "
+msgstr "Долити води: "
+
+#: unit1.cacl2cap18
+msgid "Хлорид кальция 6-водный CaCl2*6H2O"
+msgstr "Хлорид кальцію 6-водний CaCl2*6H2O"
+
+#: unit1.cacl2cap36
+msgid "Хлорид кальция безводный CaCl2"
+msgstr "Хлорид кальцію безводний CaCl2"
+
+#: unit1.cacl2capfert
+msgid "Кальций хлористый"
+msgstr "Кальцій хлористий"
+
+#: unit1.cano3cap17
+msgid "Кальций азотнокислый Са(NО3)2*4H2O"
+msgstr "Кальцій азотнокислий Са(NО3)2*4H2O"
+
+#: unit1.cano3cap20
+msgid "Кальций азотнокислый Ca(NO3)2*2H2O"
+msgstr "Кальцій азотнокислий Ca(NO3)2*2H2O"
+
+#: unit1.cano3cap24
+msgid "Кальций азотнокислый Ca(NO3)2"
+msgstr "Кальцій азотнокислий Ca(NO3)2"
+
+#: unit1.cano3capfert
+msgid "Селитра кальциевая"
+msgstr "Селітра кальцієва"
+
+#: unit1.compositioncap
+msgid "Состав: "
+msgstr "Склад: "
+
+#: unit1.concentrationcapt
+msgid "Концентрация: "
+msgstr "Концентрація: "
+
+#: unit1.consumptioncapt
+msgid "Расход: "
+msgstr "Витрата: "
+
+#: unit1.grcap
+msgid " г. "
+msgstr " г. "
+
+#: unit1.grlitcap
+msgctxt "unit1.grlitcap"
+msgid "г/л"
+msgstr "г/л"
+
+#: unit1.grmlcap
+msgctxt "unit1.grmlcap"
+msgid "г/мл"
+msgstr "г/мл"
+
+#: unit1.grpricecapt
+msgid "г. цена:"
+msgstr "г. ціна:"
+
+#: unit1.k2so4cap44
+msgid "Калий сернокислый K2SO4"
+msgstr "Калій сірчанокислий K2SO4"
+
+#: unit1.k2so4capfert
+msgid "Сульфат калия"
+msgstr "Сульфат калію"
+
+#: unit1.kh2po4cap
+msgid "Калий фосфорнокислый KH2PO4"
+msgstr "Калій фосфорнокислий KH2PO4"
+
+#: unit1.kh2po4capfert
+msgid "Монофосфат калия"
+msgstr "Монофосфат калію"
+
+#: unit1.kno3cap
+msgid "Калий азотнокислый KNO3"
+msgstr "Калій азотнокислий KNO3"
+
+#: unit1.kno3capfert
+msgid "Селитра калиевая"
+msgstr "Селітра калієва"
+
+#: unit1.korrafter
+msgid " после "
+msgstr " після "
+
+#: unit1.korrbefore
+msgid "до "
+msgstr "до "
+
+#: unit1.korrbytxt
+msgid "на: "
+msgstr "на: "
+
+#: unit1.korrchangeec
+msgid "Изменение EC на: "
+msgstr "Зміна EC на: "
+
+#: unit1.korrchangenoverby
+msgid "Изменение N общий на: "
+msgstr "Зміна N загального на: "
+
+#: unit1.korrchangevolby
+msgid "Изменение объема на: "
+msgstr "Зміна об'єму на: "
+
+#: unit1.korrcorrelationscap
+msgid "СООТНОШЕНИЯ:"
+msgstr "СПІВВІДНОШЕННЯ:"
+
+#: unit1.korrkorrtxt
+msgid "Коррекция"
+msgstr "Корекція"
+
+#: unit1.korrmaincap
+msgid "ОСНОВНОЕ:"
+msgstr "ОСНОВНЕ:"
+
+#: unit1.korroldsolshare
+msgid "Доля старого расвтора: "
+msgstr "Частка старого розчину: "
+
+#: unit1.korrprofilecap
+msgid "ПРОФИЛЬ:"
+msgstr "ПРОФІЛЬ:"
+
+#: unit1.lbcap
+msgid "Бор"
+msgstr "Бор"
+
+#: unit1.lcocap
+msgid "Кобальт"
+msgstr "Кобальт"
+
+#: unit1.lcucap
+msgid "Медь"
+msgstr "Мідь"
+
+#: unit1.lfecap
+msgid "Железо"
+msgstr "Залізо"
+
+#: unit1.lmncap
+msgid "Марганец"
+msgstr "Марганець"
+
+#: unit1.lmocap
+msgid "Молибден"
+msgstr "Молібден"
+
+#: unit1.lsicap
+msgid "Кремний"
+msgstr "Кремній"
+
+#: unit1.lzncap
+msgid "Цинк"
+msgstr "Цинк"
+
+#: unit1.m1textautocap
+msgid "Автозапись. Изготовлен раствор на "
+msgstr "Автозапис. Виготовлений розчин на "
+
+#: unit1.m1textcap
+msgid "Корректор. Скорректирован раствор до "
+msgstr "Коректор. Розчин скорегований до "
+
+#: unit1.m1textliterscap
+msgid "литров."
+msgstr "літрів."
+
+#: unit1.mgno3cap16
+msgid "Магний азотнокислый Mg(NO3)2"
+msgstr "Магній азотнокислий Mg(NO3)2"
+
+#: unit1.mgno3cap9
+msgid "Магний азотнокислый Mg(NO3)2*6H2O"
+msgstr "Магній азотнокислий Mg(NO3)2*6H2O"
+
+#: unit1.mgno3capfert
+msgid "Селитра магниевая"
+msgstr "Селітра магнієва"
+
+#: unit1.mgso4cap20
+msgid "Магний сернокислый MgSO4"
+msgstr "Магній сірчанокислий MgSO4"
+
+#: unit1.mgso4cap9
+msgid "Магний сернокислый MgSO4*7H2O"
+msgstr "Магній сірчанокислий MgSO4*7H2O"
+
+#: unit1.mgso4capfert
+msgid "Сульфат магния"
+msgstr "Сульфат магнію"
+
+#: unit1.mlitsolucap
+msgid "мл/л раствора"
+msgstr "мл/л розчину"
+
+#: unit1.multiplicitycapt
+msgid "Кратность: "
+msgstr "Кратність: "
+
+#: unit1.nh4no3cap
+msgid "Аммоний азотнокислый NH4NO3"
+msgstr "Амоній азотнокислий NH4NO3"
+
+#: unit1.nh4no3capfert
+msgid "Селитра аммиачная"
+msgstr "Селітра аміачна"
+
+#: unit1.nodescfielderror
+msgid "Не заполнено поле описание!"
+msgstr "Не заповнене поле опису!"
+
+#: unit1.perlitrecapt
+msgid "за 1 литр:"
+msgstr "за 1 літр:"
+
+#: unit1.pricecapt
+msgid "Стоимость: "
+msgstr "Вартість: "
+
+#: unit1.volacap
+msgid "Концентрат A"
+msgstr "Концентрат A"
+
+#: unit1.volbcap
+msgid "Концентрат B"
+msgstr "Концентрат B"
+
+#: unit1.volcap
+msgid "Объем: "
+msgstr "Об`єм: "
