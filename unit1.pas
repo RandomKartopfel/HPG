@@ -83,6 +83,12 @@ lMoCap = 'Молибден';
 lCoCap = 'Кобальт';
 lSiCap = 'Кремний';
 
+volMlCap = 'мл';
+volPoCap = 'По ';
+volMlNaL = ' мл на 1л.';
+volVes = 'вес: ';
+volGrPlotn = 'гр, плотность:';
+
 type
 
   { TKf }
@@ -1746,8 +1752,8 @@ begin
     Aw:=round(Kf.tAml.value-Av);
     Aml:= round(Kf.tAml.value/Kf.V.value*1000)/1000;
 
-    Kf.sumA.Caption:=volCap+FloatToStr(Av)+' мл, '+'вес: '+FloatToStr(Am)+' гр,'+' плотность: '+FloatToStr(Ak)+' ' + grMlCap + '. ';
-    Kf.lVolA.Caption:=volACap+' ('+ FloatToStr(Ac)+':1). '+addWaterCap+ FloatToStr(Aw) + 'мл. По ' + FloatToStr(Aml) + ' мл на 1л.';
+    Kf.sumA.Caption:=volCap+FloatToStr(Av)+' '+ volMlCap+', '+volVes+FloatToStr(Am)+' '+volGrPlotn+' '+FloatToStr(Ak)+' ' + grMlCap + '. ';
+    Kf.lVolA.Caption:=volACap+' ('+ FloatToStr(Ac)+':1). '+addWaterCap+ FloatToStr(Aw) + volMlCap+'. '+ volPoCap + FloatToStr(Aml) + volMlNaL;
 
      vmlMgSO4:=Kf.mlMgSO4.Value;
      vmlKH2PO4:=Kf.mlKH2PO4.Value;
@@ -1778,8 +1784,8 @@ begin
      if (Kf.tBml.value <> 0) then Bc:=round(Kf.V.value/Kf.tBml.value*1000);
     Bw:=round(Kf.tBml.value-Bv);
     Bml:= round(Kf.tBml.value/Kf.V.value*1000)/1000;
-    Kf.sumB.Caption:=VolCap+FloatToStr(round(Bv*10)/10)+' мл, '+'вес: '+FloatToStr(Bm)+' гр,'+ ' плотность: '+FloatToStr(Bk)+' г/мл';
-    Kf.lVolB.Caption:=volBCap+' ('+ FloatToStr(Bc)+':1). '+addWaterCap+ FloatToStr(Bw) + 'мл. По ' + FloatToStr(Bml) + ' мл на 1л.';
+    Kf.sumB.Caption:=VolCap+FloatToStr(round(Bv*10)/10)+volMlCap+', '+volVes+FloatToStr(Bm)+' '+volGrPlotn+' '+FloatToStr(Bk)+' '+grMlCap + '. ';
+    Kf.lVolB.Caption:=volBCap+' ('+ FloatToStr(Bc)+':1). '+addWaterCap+ FloatToStr(Bw) + volMlCap+'. '+ volPoCap + FloatToStr(Bml) + volMlNaL;
     //
 end;
 

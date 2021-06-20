@@ -1462,3 +1462,24 @@ msgstr "Концентрат B"
 #: unit1.volcap
 msgid "Объем: "
 msgstr "Об`єм: "
+
+#: unit1.volgrplotn
+msgid "гр, плотность:"
+msgstr "гр, щільність:"
+
+#: unit1.volmlcap
+msgctxt "unit1.volmlcap"
+msgid "мл"
+msgstr "мл"
+
+#: unit1.volmlnal
+msgid " мл на 1л."
+msgstr " мл на 1л."
+
+#: unit1.volpocap
+msgid "По "
+msgstr "По "
+
+#: unit1.volves
+msgid "вес: "
+msgstr "вага: "

@@ -1139,6 +1139,7 @@ msgid "г/мл"
 msgstr ""
 
 #: tkf.statictext3.caption
+msgctxt "tkf.statictext3.caption"
 msgid "мл"
 msgstr ""
 
@@ -1448,5 +1449,26 @@ msgstr ""
 
 #: unit1.volcap
 msgid "Объем: "
+msgstr ""
+
+#: unit1.volgrplotn
+msgid "гр, плотность:"
+msgstr ""
+
+#: unit1.volmlcap
+msgctxt "unit1.volmlcap"
+msgid "мл"
+msgstr ""
+
+#: unit1.volmlnal
+msgid " мл на 1л."
+msgstr ""
+
+#: unit1.volpocap
+msgid "По "
+msgstr ""
+
+#: unit1.volves
+msgid "вес: "
 msgstr ""
 
