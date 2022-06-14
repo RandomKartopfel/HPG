@@ -1257,7 +1257,7 @@ msgstr "Calcium nitrate Ca(NO3)2"
 
 #: unit1.cano3capfert
 msgid "Селитра кальциевая"
-msgstr "Селитра кальциевая"
+msgstr "Calcium nitrate"
 
 #: unit1.compositioncap
 msgid "Состав: "
